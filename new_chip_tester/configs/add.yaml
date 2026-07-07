@@ -1,0 +1,1540 @@
+chip: 74HC283 ADDER
+package: DIP16
+stop_on_fail: true
+tests:
+- name: A=0000 B=0000 Cin=0
+  frame: z00z000gzz00z00v
+  expect: 0xx0xxxx00xx0xxx
+- name: A=0000 B=0000 Cin=1
+  frame: z00z001gzz00z00v
+  expect: 0xx1xxxx00xx0xxx
+- name: A=0000 B=0001 Cin=0
+  frame: z00z010gzz00z00v
+  expect: 0xx1xxxx00xx0xxx
+- name: A=0000 B=0001 Cin=1
+  frame: z00z011gzz00z00v
+  expect: 1xx0xxxx00xx0xxx
+- name: A=0000 B=0010 Cin=0
+  frame: z10z000gzz00z00v
+  expect: 1xx0xxxx00xx0xxx
+- name: A=0000 B=0010 Cin=1
+  frame: z10z001gzz00z00v
+  expect: 1xx1xxxx00xx0xxx
+- name: A=0000 B=0011 Cin=0
+  frame: z10z010gzz00z00v
+  expect: 1xx1xxxx00xx0xxx
+- name: A=0000 B=0011 Cin=1
+  frame: z10z011gzz00z00v
+  expect: 0xx0xxxx00xx1xxx
+- name: A=0000 B=0100 Cin=0
+  frame: z00z000gzz00z01v
+  expect: 0xx0xxxx00xx1xxx
+- name: A=0000 B=0100 Cin=1
+  frame: z00z001gzz00z01v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0000 B=0101 Cin=0
+  frame: z00z010gzz00z01v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0000 B=0101 Cin=1
+  frame: z00z011gzz00z01v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0000 B=0110 Cin=0
+  frame: z10z000gzz00z01v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0000 B=0110 Cin=1
+  frame: z10z001gzz00z01v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0000 B=0111 Cin=0
+  frame: z10z010gzz00z01v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0000 B=0111 Cin=1
+  frame: z10z011gzz00z01v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0000 B=1000 Cin=0
+  frame: z00z000gzz10z00v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0000 B=1000 Cin=1
+  frame: z00z001gzz10z00v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0000 B=1001 Cin=0
+  frame: z00z010gzz10z00v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0000 B=1001 Cin=1
+  frame: z00z011gzz10z00v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0000 B=1010 Cin=0
+  frame: z10z000gzz10z00v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0000 B=1010 Cin=1
+  frame: z10z001gzz10z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0000 B=1011 Cin=0
+  frame: z10z010gzz10z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0000 B=1011 Cin=1
+  frame: z10z011gzz10z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0000 B=1100 Cin=0
+  frame: z00z000gzz10z01v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0000 B=1100 Cin=1
+  frame: z00z001gzz10z01v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0000 B=1101 Cin=0
+  frame: z00z010gzz10z01v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0000 B=1101 Cin=1
+  frame: z00z011gzz10z01v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0000 B=1110 Cin=0
+  frame: z10z000gzz10z01v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0000 B=1110 Cin=1
+  frame: z10z001gzz10z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0000 B=1111 Cin=0
+  frame: z10z010gzz10z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0000 B=1111 Cin=1
+  frame: z10z011gzz10z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0001 B=0000 Cin=0
+  frame: z00z100gzz00z00v
+  expect: 0xx1xxxx00xx0xxx
+- name: A=0001 B=0000 Cin=1
+  frame: z00z101gzz00z00v
+  expect: 1xx0xxxx00xx0xxx
+- name: A=0001 B=0001 Cin=0
+  frame: z00z110gzz00z00v
+  expect: 1xx0xxxx00xx0xxx
+- name: A=0001 B=0001 Cin=1
+  frame: z00z111gzz00z00v
+  expect: 1xx1xxxx00xx0xxx
+- name: A=0001 B=0010 Cin=0
+  frame: z10z100gzz00z00v
+  expect: 1xx1xxxx00xx0xxx
+- name: A=0001 B=0010 Cin=1
+  frame: z10z101gzz00z00v
+  expect: 0xx0xxxx00xx1xxx
+- name: A=0001 B=0011 Cin=0
+  frame: z10z110gzz00z00v
+  expect: 0xx0xxxx00xx1xxx
+- name: A=0001 B=0011 Cin=1
+  frame: z10z111gzz00z00v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0001 B=0100 Cin=0
+  frame: z00z100gzz00z01v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0001 B=0100 Cin=1
+  frame: z00z101gzz00z01v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0001 B=0101 Cin=0
+  frame: z00z110gzz00z01v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0001 B=0101 Cin=1
+  frame: z00z111gzz00z01v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0001 B=0110 Cin=0
+  frame: z10z100gzz00z01v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0001 B=0110 Cin=1
+  frame: z10z101gzz00z01v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0001 B=0111 Cin=0
+  frame: z10z110gzz00z01v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0001 B=0111 Cin=1
+  frame: z10z111gzz00z01v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0001 B=1000 Cin=0
+  frame: z00z100gzz10z00v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0001 B=1000 Cin=1
+  frame: z00z101gzz10z00v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0001 B=1001 Cin=0
+  frame: z00z110gzz10z00v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0001 B=1001 Cin=1
+  frame: z00z111gzz10z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0001 B=1010 Cin=0
+  frame: z10z100gzz10z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0001 B=1010 Cin=1
+  frame: z10z101gzz10z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0001 B=1011 Cin=0
+  frame: z10z110gzz10z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0001 B=1011 Cin=1
+  frame: z10z111gzz10z00v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0001 B=1100 Cin=0
+  frame: z00z100gzz10z01v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0001 B=1100 Cin=1
+  frame: z00z101gzz10z01v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0001 B=1101 Cin=0
+  frame: z00z110gzz10z01v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0001 B=1101 Cin=1
+  frame: z00z111gzz10z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0001 B=1110 Cin=0
+  frame: z10z100gzz10z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0001 B=1110 Cin=1
+  frame: z10z101gzz10z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0001 B=1111 Cin=0
+  frame: z10z110gzz10z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0001 B=1111 Cin=1
+  frame: z10z111gzz10z01v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0010 B=0000 Cin=0
+  frame: z01z000gzz00z00v
+  expect: 1xx0xxxx00xx0xxx
+- name: A=0010 B=0000 Cin=1
+  frame: z01z001gzz00z00v
+  expect: 1xx1xxxx00xx0xxx
+- name: A=0010 B=0001 Cin=0
+  frame: z01z010gzz00z00v
+  expect: 1xx1xxxx00xx0xxx
+- name: A=0010 B=0001 Cin=1
+  frame: z01z011gzz00z00v
+  expect: 0xx0xxxx00xx1xxx
+- name: A=0010 B=0010 Cin=0
+  frame: z11z000gzz00z00v
+  expect: 0xx0xxxx00xx1xxx
+- name: A=0010 B=0010 Cin=1
+  frame: z11z001gzz00z00v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0010 B=0011 Cin=0
+  frame: z11z010gzz00z00v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0010 B=0011 Cin=1
+  frame: z11z011gzz00z00v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0010 B=0100 Cin=0
+  frame: z01z000gzz00z01v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0010 B=0100 Cin=1
+  frame: z01z001gzz00z01v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0010 B=0101 Cin=0
+  frame: z01z010gzz00z01v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0010 B=0101 Cin=1
+  frame: z01z011gzz00z01v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0010 B=0110 Cin=0
+  frame: z11z000gzz00z01v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0010 B=0110 Cin=1
+  frame: z11z001gzz00z01v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0010 B=0111 Cin=0
+  frame: z11z010gzz00z01v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0010 B=0111 Cin=1
+  frame: z11z011gzz00z01v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0010 B=1000 Cin=0
+  frame: z01z000gzz10z00v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0010 B=1000 Cin=1
+  frame: z01z001gzz10z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0010 B=1001 Cin=0
+  frame: z01z010gzz10z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0010 B=1001 Cin=1
+  frame: z01z011gzz10z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0010 B=1010 Cin=0
+  frame: z11z000gzz10z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0010 B=1010 Cin=1
+  frame: z11z001gzz10z00v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0010 B=1011 Cin=0
+  frame: z11z010gzz10z00v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0010 B=1011 Cin=1
+  frame: z11z011gzz10z00v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0010 B=1100 Cin=0
+  frame: z01z000gzz10z01v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0010 B=1100 Cin=1
+  frame: z01z001gzz10z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0010 B=1101 Cin=0
+  frame: z01z010gzz10z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0010 B=1101 Cin=1
+  frame: z01z011gzz10z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0010 B=1110 Cin=0
+  frame: z11z000gzz10z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0010 B=1110 Cin=1
+  frame: z11z001gzz10z01v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0010 B=1111 Cin=0
+  frame: z11z010gzz10z01v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0010 B=1111 Cin=1
+  frame: z11z011gzz10z01v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0011 B=0000 Cin=0
+  frame: z01z100gzz00z00v
+  expect: 1xx1xxxx00xx0xxx
+- name: A=0011 B=0000 Cin=1
+  frame: z01z101gzz00z00v
+  expect: 0xx0xxxx00xx1xxx
+- name: A=0011 B=0001 Cin=0
+  frame: z01z110gzz00z00v
+  expect: 0xx0xxxx00xx1xxx
+- name: A=0011 B=0001 Cin=1
+  frame: z01z111gzz00z00v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0011 B=0010 Cin=0
+  frame: z11z100gzz00z00v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0011 B=0010 Cin=1
+  frame: z11z101gzz00z00v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0011 B=0011 Cin=0
+  frame: z11z110gzz00z00v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0011 B=0011 Cin=1
+  frame: z11z111gzz00z00v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0011 B=0100 Cin=0
+  frame: z01z100gzz00z01v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0011 B=0100 Cin=1
+  frame: z01z101gzz00z01v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0011 B=0101 Cin=0
+  frame: z01z110gzz00z01v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0011 B=0101 Cin=1
+  frame: z01z111gzz00z01v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0011 B=0110 Cin=0
+  frame: z11z100gzz00z01v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0011 B=0110 Cin=1
+  frame: z11z101gzz00z01v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0011 B=0111 Cin=0
+  frame: z11z110gzz00z01v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0011 B=0111 Cin=1
+  frame: z11z111gzz00z01v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0011 B=1000 Cin=0
+  frame: z01z100gzz10z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0011 B=1000 Cin=1
+  frame: z01z101gzz10z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0011 B=1001 Cin=0
+  frame: z01z110gzz10z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0011 B=1001 Cin=1
+  frame: z01z111gzz10z00v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0011 B=1010 Cin=0
+  frame: z11z100gzz10z00v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0011 B=1010 Cin=1
+  frame: z11z101gzz10z00v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0011 B=1011 Cin=0
+  frame: z11z110gzz10z00v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0011 B=1011 Cin=1
+  frame: z11z111gzz10z00v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0011 B=1100 Cin=0
+  frame: z01z100gzz10z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0011 B=1100 Cin=1
+  frame: z01z101gzz10z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0011 B=1101 Cin=0
+  frame: z01z110gzz10z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0011 B=1101 Cin=1
+  frame: z01z111gzz10z01v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0011 B=1110 Cin=0
+  frame: z11z100gzz10z01v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0011 B=1110 Cin=1
+  frame: z11z101gzz10z01v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0011 B=1111 Cin=0
+  frame: z11z110gzz10z01v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0011 B=1111 Cin=1
+  frame: z11z111gzz10z01v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=0100 B=0000 Cin=0
+  frame: z00z000gzz00z10v
+  expect: 0xx0xxxx00xx1xxx
+- name: A=0100 B=0000 Cin=1
+  frame: z00z001gzz00z10v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0100 B=0001 Cin=0
+  frame: z00z010gzz00z10v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0100 B=0001 Cin=1
+  frame: z00z011gzz00z10v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0100 B=0010 Cin=0
+  frame: z10z000gzz00z10v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0100 B=0010 Cin=1
+  frame: z10z001gzz00z10v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0100 B=0011 Cin=0
+  frame: z10z010gzz00z10v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0100 B=0011 Cin=1
+  frame: z10z011gzz00z10v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0100 B=0100 Cin=0
+  frame: z00z000gzz00z11v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0100 B=0100 Cin=1
+  frame: z00z001gzz00z11v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0100 B=0101 Cin=0
+  frame: z00z010gzz00z11v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0100 B=0101 Cin=1
+  frame: z00z011gzz00z11v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0100 B=0110 Cin=0
+  frame: z10z000gzz00z11v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0100 B=0110 Cin=1
+  frame: z10z001gzz00z11v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0100 B=0111 Cin=0
+  frame: z10z010gzz00z11v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0100 B=0111 Cin=1
+  frame: z10z011gzz00z11v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0100 B=1000 Cin=0
+  frame: z00z000gzz10z10v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0100 B=1000 Cin=1
+  frame: z00z001gzz10z10v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0100 B=1001 Cin=0
+  frame: z00z010gzz10z10v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0100 B=1001 Cin=1
+  frame: z00z011gzz10z10v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0100 B=1010 Cin=0
+  frame: z10z000gzz10z10v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0100 B=1010 Cin=1
+  frame: z10z001gzz10z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0100 B=1011 Cin=0
+  frame: z10z010gzz10z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0100 B=1011 Cin=1
+  frame: z10z011gzz10z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0100 B=1100 Cin=0
+  frame: z00z000gzz10z11v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0100 B=1100 Cin=1
+  frame: z00z001gzz10z11v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0100 B=1101 Cin=0
+  frame: z00z010gzz10z11v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0100 B=1101 Cin=1
+  frame: z00z011gzz10z11v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0100 B=1110 Cin=0
+  frame: z10z000gzz10z11v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0100 B=1110 Cin=1
+  frame: z10z001gzz10z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=0100 B=1111 Cin=0
+  frame: z10z010gzz10z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=0100 B=1111 Cin=1
+  frame: z10z011gzz10z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=0101 B=0000 Cin=0
+  frame: z00z100gzz00z10v
+  expect: 0xx1xxxx00xx1xxx
+- name: A=0101 B=0000 Cin=1
+  frame: z00z101gzz00z10v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0101 B=0001 Cin=0
+  frame: z00z110gzz00z10v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0101 B=0001 Cin=1
+  frame: z00z111gzz00z10v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0101 B=0010 Cin=0
+  frame: z10z100gzz00z10v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0101 B=0010 Cin=1
+  frame: z10z101gzz00z10v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0101 B=0011 Cin=0
+  frame: z10z110gzz00z10v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0101 B=0011 Cin=1
+  frame: z10z111gzz00z10v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0101 B=0100 Cin=0
+  frame: z00z100gzz00z11v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0101 B=0100 Cin=1
+  frame: z00z101gzz00z11v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0101 B=0101 Cin=0
+  frame: z00z110gzz00z11v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0101 B=0101 Cin=1
+  frame: z00z111gzz00z11v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0101 B=0110 Cin=0
+  frame: z10z100gzz00z11v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0101 B=0110 Cin=1
+  frame: z10z101gzz00z11v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0101 B=0111 Cin=0
+  frame: z10z110gzz00z11v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0101 B=0111 Cin=1
+  frame: z10z111gzz00z11v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0101 B=1000 Cin=0
+  frame: z00z100gzz10z10v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0101 B=1000 Cin=1
+  frame: z00z101gzz10z10v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0101 B=1001 Cin=0
+  frame: z00z110gzz10z10v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0101 B=1001 Cin=1
+  frame: z00z111gzz10z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0101 B=1010 Cin=0
+  frame: z10z100gzz10z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0101 B=1010 Cin=1
+  frame: z10z101gzz10z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0101 B=1011 Cin=0
+  frame: z10z110gzz10z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0101 B=1011 Cin=1
+  frame: z10z111gzz10z10v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0101 B=1100 Cin=0
+  frame: z00z100gzz10z11v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0101 B=1100 Cin=1
+  frame: z00z101gzz10z11v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0101 B=1101 Cin=0
+  frame: z00z110gzz10z11v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0101 B=1101 Cin=1
+  frame: z00z111gzz10z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=0101 B=1110 Cin=0
+  frame: z10z100gzz10z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=0101 B=1110 Cin=1
+  frame: z10z101gzz10z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=0101 B=1111 Cin=0
+  frame: z10z110gzz10z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=0101 B=1111 Cin=1
+  frame: z10z111gzz10z11v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=0110 B=0000 Cin=0
+  frame: z01z000gzz00z10v
+  expect: 1xx0xxxx00xx1xxx
+- name: A=0110 B=0000 Cin=1
+  frame: z01z001gzz00z10v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0110 B=0001 Cin=0
+  frame: z01z010gzz00z10v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0110 B=0001 Cin=1
+  frame: z01z011gzz00z10v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0110 B=0010 Cin=0
+  frame: z11z000gzz00z10v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0110 B=0010 Cin=1
+  frame: z11z001gzz00z10v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0110 B=0011 Cin=0
+  frame: z11z010gzz00z10v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0110 B=0011 Cin=1
+  frame: z11z011gzz00z10v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0110 B=0100 Cin=0
+  frame: z01z000gzz00z11v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0110 B=0100 Cin=1
+  frame: z01z001gzz00z11v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0110 B=0101 Cin=0
+  frame: z01z010gzz00z11v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0110 B=0101 Cin=1
+  frame: z01z011gzz00z11v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0110 B=0110 Cin=0
+  frame: z11z000gzz00z11v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0110 B=0110 Cin=1
+  frame: z11z001gzz00z11v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0110 B=0111 Cin=0
+  frame: z11z010gzz00z11v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0110 B=0111 Cin=1
+  frame: z11z011gzz00z11v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0110 B=1000 Cin=0
+  frame: z01z000gzz10z10v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0110 B=1000 Cin=1
+  frame: z01z001gzz10z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0110 B=1001 Cin=0
+  frame: z01z010gzz10z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0110 B=1001 Cin=1
+  frame: z01z011gzz10z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0110 B=1010 Cin=0
+  frame: z11z000gzz10z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0110 B=1010 Cin=1
+  frame: z11z001gzz10z10v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0110 B=1011 Cin=0
+  frame: z11z010gzz10z10v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0110 B=1011 Cin=1
+  frame: z11z011gzz10z10v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0110 B=1100 Cin=0
+  frame: z01z000gzz10z11v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0110 B=1100 Cin=1
+  frame: z01z001gzz10z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=0110 B=1101 Cin=0
+  frame: z01z010gzz10z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=0110 B=1101 Cin=1
+  frame: z01z011gzz10z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=0110 B=1110 Cin=0
+  frame: z11z000gzz10z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=0110 B=1110 Cin=1
+  frame: z11z001gzz10z11v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=0110 B=1111 Cin=0
+  frame: z11z010gzz10z11v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=0110 B=1111 Cin=1
+  frame: z11z011gzz10z11v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=0111 B=0000 Cin=0
+  frame: z01z100gzz00z10v
+  expect: 1xx1xxxx00xx1xxx
+- name: A=0111 B=0000 Cin=1
+  frame: z01z101gzz00z10v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0111 B=0001 Cin=0
+  frame: z01z110gzz00z10v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=0111 B=0001 Cin=1
+  frame: z01z111gzz00z10v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0111 B=0010 Cin=0
+  frame: z11z100gzz00z10v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=0111 B=0010 Cin=1
+  frame: z11z101gzz00z10v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0111 B=0011 Cin=0
+  frame: z11z110gzz00z10v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=0111 B=0011 Cin=1
+  frame: z11z111gzz00z10v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0111 B=0100 Cin=0
+  frame: z01z100gzz00z11v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=0111 B=0100 Cin=1
+  frame: z01z101gzz00z11v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0111 B=0101 Cin=0
+  frame: z01z110gzz00z11v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=0111 B=0101 Cin=1
+  frame: z01z111gzz00z11v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0111 B=0110 Cin=0
+  frame: z11z100gzz00z11v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=0111 B=0110 Cin=1
+  frame: z11z101gzz00z11v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0111 B=0111 Cin=0
+  frame: z11z110gzz00z11v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=0111 B=0111 Cin=1
+  frame: z11z111gzz00z11v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0111 B=1000 Cin=0
+  frame: z01z100gzz10z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=0111 B=1000 Cin=1
+  frame: z01z101gzz10z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0111 B=1001 Cin=0
+  frame: z01z110gzz10z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=0111 B=1001 Cin=1
+  frame: z01z111gzz10z10v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0111 B=1010 Cin=0
+  frame: z11z100gzz10z10v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=0111 B=1010 Cin=1
+  frame: z11z101gzz10z10v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0111 B=1011 Cin=0
+  frame: z11z110gzz10z10v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=0111 B=1011 Cin=1
+  frame: z11z111gzz10z10v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=0111 B=1100 Cin=0
+  frame: z01z100gzz10z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=0111 B=1100 Cin=1
+  frame: z01z101gzz10z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=0111 B=1101 Cin=0
+  frame: z01z110gzz10z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=0111 B=1101 Cin=1
+  frame: z01z111gzz10z11v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=0111 B=1110 Cin=0
+  frame: z11z100gzz10z11v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=0111 B=1110 Cin=1
+  frame: z11z101gzz10z11v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=0111 B=1111 Cin=0
+  frame: z11z110gzz10z11v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=0111 B=1111 Cin=1
+  frame: z11z111gzz10z11v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1000 B=0000 Cin=0
+  frame: z00z000gzz01z00v
+  expect: 0xx0xxxx01xx0xxx
+- name: A=1000 B=0000 Cin=1
+  frame: z00z001gzz01z00v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=1000 B=0001 Cin=0
+  frame: z00z010gzz01z00v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=1000 B=0001 Cin=1
+  frame: z00z011gzz01z00v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=1000 B=0010 Cin=0
+  frame: z10z000gzz01z00v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=1000 B=0010 Cin=1
+  frame: z10z001gzz01z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=1000 B=0011 Cin=0
+  frame: z10z010gzz01z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=1000 B=0011 Cin=1
+  frame: z10z011gzz01z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=1000 B=0100 Cin=0
+  frame: z00z000gzz01z01v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=1000 B=0100 Cin=1
+  frame: z00z001gzz01z01v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1000 B=0101 Cin=0
+  frame: z00z010gzz01z01v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1000 B=0101 Cin=1
+  frame: z00z011gzz01z01v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1000 B=0110 Cin=0
+  frame: z10z000gzz01z01v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1000 B=0110 Cin=1
+  frame: z10z001gzz01z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1000 B=0111 Cin=0
+  frame: z10z010gzz01z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1000 B=0111 Cin=1
+  frame: z10z011gzz01z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1000 B=1000 Cin=0
+  frame: z00z000gzz11z00v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1000 B=1000 Cin=1
+  frame: z00z001gzz11z00v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1000 B=1001 Cin=0
+  frame: z00z010gzz11z00v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1000 B=1001 Cin=1
+  frame: z00z011gzz11z00v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1000 B=1010 Cin=0
+  frame: z10z000gzz11z00v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1000 B=1010 Cin=1
+  frame: z10z001gzz11z00v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1000 B=1011 Cin=0
+  frame: z10z010gzz11z00v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1000 B=1011 Cin=1
+  frame: z10z011gzz11z00v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1000 B=1100 Cin=0
+  frame: z00z000gzz11z01v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1000 B=1100 Cin=1
+  frame: z00z001gzz11z01v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1000 B=1101 Cin=0
+  frame: z00z010gzz11z01v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1000 B=1101 Cin=1
+  frame: z00z011gzz11z01v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1000 B=1110 Cin=0
+  frame: z10z000gzz11z01v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1000 B=1110 Cin=1
+  frame: z10z001gzz11z01v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1000 B=1111 Cin=0
+  frame: z10z010gzz11z01v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1000 B=1111 Cin=1
+  frame: z10z011gzz11z01v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1001 B=0000 Cin=0
+  frame: z00z100gzz01z00v
+  expect: 0xx1xxxx01xx0xxx
+- name: A=1001 B=0000 Cin=1
+  frame: z00z101gzz01z00v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=1001 B=0001 Cin=0
+  frame: z00z110gzz01z00v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=1001 B=0001 Cin=1
+  frame: z00z111gzz01z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=1001 B=0010 Cin=0
+  frame: z10z100gzz01z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=1001 B=0010 Cin=1
+  frame: z10z101gzz01z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=1001 B=0011 Cin=0
+  frame: z10z110gzz01z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=1001 B=0011 Cin=1
+  frame: z10z111gzz01z00v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1001 B=0100 Cin=0
+  frame: z00z100gzz01z01v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1001 B=0100 Cin=1
+  frame: z00z101gzz01z01v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1001 B=0101 Cin=0
+  frame: z00z110gzz01z01v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1001 B=0101 Cin=1
+  frame: z00z111gzz01z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1001 B=0110 Cin=0
+  frame: z10z100gzz01z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1001 B=0110 Cin=1
+  frame: z10z101gzz01z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1001 B=0111 Cin=0
+  frame: z10z110gzz01z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1001 B=0111 Cin=1
+  frame: z10z111gzz01z01v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1001 B=1000 Cin=0
+  frame: z00z100gzz11z00v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1001 B=1000 Cin=1
+  frame: z00z101gzz11z00v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1001 B=1001 Cin=0
+  frame: z00z110gzz11z00v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1001 B=1001 Cin=1
+  frame: z00z111gzz11z00v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1001 B=1010 Cin=0
+  frame: z10z100gzz11z00v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1001 B=1010 Cin=1
+  frame: z10z101gzz11z00v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1001 B=1011 Cin=0
+  frame: z10z110gzz11z00v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1001 B=1011 Cin=1
+  frame: z10z111gzz11z00v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1001 B=1100 Cin=0
+  frame: z00z100gzz11z01v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1001 B=1100 Cin=1
+  frame: z00z101gzz11z01v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1001 B=1101 Cin=0
+  frame: z00z110gzz11z01v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1001 B=1101 Cin=1
+  frame: z00z111gzz11z01v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1001 B=1110 Cin=0
+  frame: z10z100gzz11z01v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1001 B=1110 Cin=1
+  frame: z10z101gzz11z01v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1001 B=1111 Cin=0
+  frame: z10z110gzz11z01v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1001 B=1111 Cin=1
+  frame: z10z111gzz11z01v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1010 B=0000 Cin=0
+  frame: z01z000gzz01z00v
+  expect: 1xx0xxxx01xx0xxx
+- name: A=1010 B=0000 Cin=1
+  frame: z01z001gzz01z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=1010 B=0001 Cin=0
+  frame: z01z010gzz01z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=1010 B=0001 Cin=1
+  frame: z01z011gzz01z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=1010 B=0010 Cin=0
+  frame: z11z000gzz01z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=1010 B=0010 Cin=1
+  frame: z11z001gzz01z00v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1010 B=0011 Cin=0
+  frame: z11z010gzz01z00v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1010 B=0011 Cin=1
+  frame: z11z011gzz01z00v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1010 B=0100 Cin=0
+  frame: z01z000gzz01z01v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1010 B=0100 Cin=1
+  frame: z01z001gzz01z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1010 B=0101 Cin=0
+  frame: z01z010gzz01z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1010 B=0101 Cin=1
+  frame: z01z011gzz01z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1010 B=0110 Cin=0
+  frame: z11z000gzz01z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1010 B=0110 Cin=1
+  frame: z11z001gzz01z01v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1010 B=0111 Cin=0
+  frame: z11z010gzz01z01v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1010 B=0111 Cin=1
+  frame: z11z011gzz01z01v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1010 B=1000 Cin=0
+  frame: z01z000gzz11z00v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1010 B=1000 Cin=1
+  frame: z01z001gzz11z00v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1010 B=1001 Cin=0
+  frame: z01z010gzz11z00v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1010 B=1001 Cin=1
+  frame: z01z011gzz11z00v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1010 B=1010 Cin=0
+  frame: z11z000gzz11z00v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1010 B=1010 Cin=1
+  frame: z11z001gzz11z00v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1010 B=1011 Cin=0
+  frame: z11z010gzz11z00v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1010 B=1011 Cin=1
+  frame: z11z011gzz11z00v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1010 B=1100 Cin=0
+  frame: z01z000gzz11z01v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1010 B=1100 Cin=1
+  frame: z01z001gzz11z01v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1010 B=1101 Cin=0
+  frame: z01z010gzz11z01v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1010 B=1101 Cin=1
+  frame: z01z011gzz11z01v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1010 B=1110 Cin=0
+  frame: z11z000gzz11z01v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1010 B=1110 Cin=1
+  frame: z11z001gzz11z01v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1010 B=1111 Cin=0
+  frame: z11z010gzz11z01v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1010 B=1111 Cin=1
+  frame: z11z011gzz11z01v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1011 B=0000 Cin=0
+  frame: z01z100gzz01z00v
+  expect: 1xx1xxxx01xx0xxx
+- name: A=1011 B=0000 Cin=1
+  frame: z01z101gzz01z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=1011 B=0001 Cin=0
+  frame: z01z110gzz01z00v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=1011 B=0001 Cin=1
+  frame: z01z111gzz01z00v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1011 B=0010 Cin=0
+  frame: z11z100gzz01z00v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1011 B=0010 Cin=1
+  frame: z11z101gzz01z00v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1011 B=0011 Cin=0
+  frame: z11z110gzz01z00v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1011 B=0011 Cin=1
+  frame: z11z111gzz01z00v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1011 B=0100 Cin=0
+  frame: z01z100gzz01z01v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1011 B=0100 Cin=1
+  frame: z01z101gzz01z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1011 B=0101 Cin=0
+  frame: z01z110gzz01z01v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1011 B=0101 Cin=1
+  frame: z01z111gzz01z01v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1011 B=0110 Cin=0
+  frame: z11z100gzz01z01v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1011 B=0110 Cin=1
+  frame: z11z101gzz01z01v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1011 B=0111 Cin=0
+  frame: z11z110gzz01z01v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1011 B=0111 Cin=1
+  frame: z11z111gzz01z01v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1011 B=1000 Cin=0
+  frame: z01z100gzz11z00v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1011 B=1000 Cin=1
+  frame: z01z101gzz11z00v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1011 B=1001 Cin=0
+  frame: z01z110gzz11z00v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1011 B=1001 Cin=1
+  frame: z01z111gzz11z00v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1011 B=1010 Cin=0
+  frame: z11z100gzz11z00v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1011 B=1010 Cin=1
+  frame: z11z101gzz11z00v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1011 B=1011 Cin=0
+  frame: z11z110gzz11z00v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1011 B=1011 Cin=1
+  frame: z11z111gzz11z00v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1011 B=1100 Cin=0
+  frame: z01z100gzz11z01v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1011 B=1100 Cin=1
+  frame: z01z101gzz11z01v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1011 B=1101 Cin=0
+  frame: z01z110gzz11z01v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1011 B=1101 Cin=1
+  frame: z01z111gzz11z01v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1011 B=1110 Cin=0
+  frame: z11z100gzz11z01v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1011 B=1110 Cin=1
+  frame: z11z101gzz11z01v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1011 B=1111 Cin=0
+  frame: z11z110gzz11z01v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1011 B=1111 Cin=1
+  frame: z11z111gzz11z01v
+  expect: 1xx1xxxx11xx0xxx
+- name: A=1100 B=0000 Cin=0
+  frame: z00z000gzz01z10v
+  expect: 0xx0xxxx01xx1xxx
+- name: A=1100 B=0000 Cin=1
+  frame: z00z001gzz01z10v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1100 B=0001 Cin=0
+  frame: z00z010gzz01z10v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1100 B=0001 Cin=1
+  frame: z00z011gzz01z10v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1100 B=0010 Cin=0
+  frame: z10z000gzz01z10v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1100 B=0010 Cin=1
+  frame: z10z001gzz01z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1100 B=0011 Cin=0
+  frame: z10z010gzz01z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1100 B=0011 Cin=1
+  frame: z10z011gzz01z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1100 B=0100 Cin=0
+  frame: z00z000gzz01z11v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1100 B=0100 Cin=1
+  frame: z00z001gzz01z11v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1100 B=0101 Cin=0
+  frame: z00z010gzz01z11v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1100 B=0101 Cin=1
+  frame: z00z011gzz01z11v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1100 B=0110 Cin=0
+  frame: z10z000gzz01z11v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1100 B=0110 Cin=1
+  frame: z10z001gzz01z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1100 B=0111 Cin=0
+  frame: z10z010gzz01z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1100 B=0111 Cin=1
+  frame: z10z011gzz01z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1100 B=1000 Cin=0
+  frame: z00z000gzz11z10v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1100 B=1000 Cin=1
+  frame: z00z001gzz11z10v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1100 B=1001 Cin=0
+  frame: z00z010gzz11z10v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1100 B=1001 Cin=1
+  frame: z00z011gzz11z10v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1100 B=1010 Cin=0
+  frame: z10z000gzz11z10v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1100 B=1010 Cin=1
+  frame: z10z001gzz11z10v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1100 B=1011 Cin=0
+  frame: z10z010gzz11z10v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1100 B=1011 Cin=1
+  frame: z10z011gzz11z10v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1100 B=1100 Cin=0
+  frame: z00z000gzz11z11v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1100 B=1100 Cin=1
+  frame: z00z001gzz11z11v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1100 B=1101 Cin=0
+  frame: z00z010gzz11z11v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1100 B=1101 Cin=1
+  frame: z00z011gzz11z11v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1100 B=1110 Cin=0
+  frame: z10z000gzz11z11v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1100 B=1110 Cin=1
+  frame: z10z001gzz11z11v
+  expect: 1xx1xxxx11xx0xxx
+- name: A=1100 B=1111 Cin=0
+  frame: z10z010gzz11z11v
+  expect: 1xx1xxxx11xx0xxx
+- name: A=1100 B=1111 Cin=1
+  frame: z10z011gzz11z11v
+  expect: 0xx0xxxx11xx1xxx
+- name: A=1101 B=0000 Cin=0
+  frame: z00z100gzz01z10v
+  expect: 0xx1xxxx01xx1xxx
+- name: A=1101 B=0000 Cin=1
+  frame: z00z101gzz01z10v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1101 B=0001 Cin=0
+  frame: z00z110gzz01z10v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1101 B=0001 Cin=1
+  frame: z00z111gzz01z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1101 B=0010 Cin=0
+  frame: z10z100gzz01z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1101 B=0010 Cin=1
+  frame: z10z101gzz01z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1101 B=0011 Cin=0
+  frame: z10z110gzz01z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1101 B=0011 Cin=1
+  frame: z10z111gzz01z10v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1101 B=0100 Cin=0
+  frame: z00z100gzz01z11v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1101 B=0100 Cin=1
+  frame: z00z101gzz01z11v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1101 B=0101 Cin=0
+  frame: z00z110gzz01z11v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1101 B=0101 Cin=1
+  frame: z00z111gzz01z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1101 B=0110 Cin=0
+  frame: z10z100gzz01z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1101 B=0110 Cin=1
+  frame: z10z101gzz01z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1101 B=0111 Cin=0
+  frame: z10z110gzz01z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1101 B=0111 Cin=1
+  frame: z10z111gzz01z11v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1101 B=1000 Cin=0
+  frame: z00z100gzz11z10v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1101 B=1000 Cin=1
+  frame: z00z101gzz11z10v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1101 B=1001 Cin=0
+  frame: z00z110gzz11z10v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1101 B=1001 Cin=1
+  frame: z00z111gzz11z10v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1101 B=1010 Cin=0
+  frame: z10z100gzz11z10v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1101 B=1010 Cin=1
+  frame: z10z101gzz11z10v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1101 B=1011 Cin=0
+  frame: z10z110gzz11z10v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1101 B=1011 Cin=1
+  frame: z10z111gzz11z10v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1101 B=1100 Cin=0
+  frame: z00z100gzz11z11v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1101 B=1100 Cin=1
+  frame: z00z101gzz11z11v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1101 B=1101 Cin=0
+  frame: z00z110gzz11z11v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1101 B=1101 Cin=1
+  frame: z00z111gzz11z11v
+  expect: 1xx1xxxx11xx0xxx
+- name: A=1101 B=1110 Cin=0
+  frame: z10z100gzz11z11v
+  expect: 1xx1xxxx11xx0xxx
+- name: A=1101 B=1110 Cin=1
+  frame: z10z101gzz11z11v
+  expect: 0xx0xxxx11xx1xxx
+- name: A=1101 B=1111 Cin=0
+  frame: z10z110gzz11z11v
+  expect: 0xx0xxxx11xx1xxx
+- name: A=1101 B=1111 Cin=1
+  frame: z10z111gzz11z11v
+  expect: 0xx1xxxx11xx1xxx
+- name: A=1110 B=0000 Cin=0
+  frame: z01z000gzz01z10v
+  expect: 1xx0xxxx01xx1xxx
+- name: A=1110 B=0000 Cin=1
+  frame: z01z001gzz01z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1110 B=0001 Cin=0
+  frame: z01z010gzz01z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1110 B=0001 Cin=1
+  frame: z01z011gzz01z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1110 B=0010 Cin=0
+  frame: z11z000gzz01z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1110 B=0010 Cin=1
+  frame: z11z001gzz01z10v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1110 B=0011 Cin=0
+  frame: z11z010gzz01z10v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1110 B=0011 Cin=1
+  frame: z11z011gzz01z10v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1110 B=0100 Cin=0
+  frame: z01z000gzz01z11v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1110 B=0100 Cin=1
+  frame: z01z001gzz01z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1110 B=0101 Cin=0
+  frame: z01z010gzz01z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1110 B=0101 Cin=1
+  frame: z01z011gzz01z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1110 B=0110 Cin=0
+  frame: z11z000gzz01z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1110 B=0110 Cin=1
+  frame: z11z001gzz01z11v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1110 B=0111 Cin=0
+  frame: z11z010gzz01z11v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1110 B=0111 Cin=1
+  frame: z11z011gzz01z11v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1110 B=1000 Cin=0
+  frame: z01z000gzz11z10v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1110 B=1000 Cin=1
+  frame: z01z001gzz11z10v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1110 B=1001 Cin=0
+  frame: z01z010gzz11z10v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1110 B=1001 Cin=1
+  frame: z01z011gzz11z10v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1110 B=1010 Cin=0
+  frame: z11z000gzz11z10v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1110 B=1010 Cin=1
+  frame: z11z001gzz11z10v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1110 B=1011 Cin=0
+  frame: z11z010gzz11z10v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1110 B=1011 Cin=1
+  frame: z11z011gzz11z10v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1110 B=1100 Cin=0
+  frame: z01z000gzz11z11v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1110 B=1100 Cin=1
+  frame: z01z001gzz11z11v
+  expect: 1xx1xxxx11xx0xxx
+- name: A=1110 B=1101 Cin=0
+  frame: z01z010gzz11z11v
+  expect: 1xx1xxxx11xx0xxx
+- name: A=1110 B=1101 Cin=1
+  frame: z01z011gzz11z11v
+  expect: 0xx0xxxx11xx1xxx
+- name: A=1110 B=1110 Cin=0
+  frame: z11z000gzz11z11v
+  expect: 0xx0xxxx11xx1xxx
+- name: A=1110 B=1110 Cin=1
+  frame: z11z001gzz11z11v
+  expect: 0xx1xxxx11xx1xxx
+- name: A=1110 B=1111 Cin=0
+  frame: z11z010gzz11z11v
+  expect: 0xx1xxxx11xx1xxx
+- name: A=1110 B=1111 Cin=1
+  frame: z11z011gzz11z11v
+  expect: 1xx0xxxx11xx1xxx
+- name: A=1111 B=0000 Cin=0
+  frame: z01z100gzz01z10v
+  expect: 1xx1xxxx01xx1xxx
+- name: A=1111 B=0000 Cin=1
+  frame: z01z101gzz01z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1111 B=0001 Cin=0
+  frame: z01z110gzz01z10v
+  expect: 0xx0xxxx10xx0xxx
+- name: A=1111 B=0001 Cin=1
+  frame: z01z111gzz01z10v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1111 B=0010 Cin=0
+  frame: z11z100gzz01z10v
+  expect: 0xx1xxxx10xx0xxx
+- name: A=1111 B=0010 Cin=1
+  frame: z11z101gzz01z10v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1111 B=0011 Cin=0
+  frame: z11z110gzz01z10v
+  expect: 1xx0xxxx10xx0xxx
+- name: A=1111 B=0011 Cin=1
+  frame: z11z111gzz01z10v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1111 B=0100 Cin=0
+  frame: z01z100gzz01z11v
+  expect: 1xx1xxxx10xx0xxx
+- name: A=1111 B=0100 Cin=1
+  frame: z01z101gzz01z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1111 B=0101 Cin=0
+  frame: z01z110gzz01z11v
+  expect: 0xx0xxxx10xx1xxx
+- name: A=1111 B=0101 Cin=1
+  frame: z01z111gzz01z11v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1111 B=0110 Cin=0
+  frame: z11z100gzz01z11v
+  expect: 0xx1xxxx10xx1xxx
+- name: A=1111 B=0110 Cin=1
+  frame: z11z101gzz01z11v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1111 B=0111 Cin=0
+  frame: z11z110gzz01z11v
+  expect: 1xx0xxxx10xx1xxx
+- name: A=1111 B=0111 Cin=1
+  frame: z11z111gzz01z11v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1111 B=1000 Cin=0
+  frame: z01z100gzz11z10v
+  expect: 1xx1xxxx10xx1xxx
+- name: A=1111 B=1000 Cin=1
+  frame: z01z101gzz11z10v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1111 B=1001 Cin=0
+  frame: z01z110gzz11z10v
+  expect: 0xx0xxxx11xx0xxx
+- name: A=1111 B=1001 Cin=1
+  frame: z01z111gzz11z10v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1111 B=1010 Cin=0
+  frame: z11z100gzz11z10v
+  expect: 0xx1xxxx11xx0xxx
+- name: A=1111 B=1010 Cin=1
+  frame: z11z101gzz11z10v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1111 B=1011 Cin=0
+  frame: z11z110gzz11z10v
+  expect: 1xx0xxxx11xx0xxx
+- name: A=1111 B=1011 Cin=1
+  frame: z11z111gzz11z10v
+  expect: 1xx1xxxx11xx0xxx
+- name: A=1111 B=1100 Cin=0
+  frame: z01z100gzz11z11v
+  expect: 1xx1xxxx11xx0xxx
+- name: A=1111 B=1100 Cin=1
+  frame: z01z101gzz11z11v
+  expect: 0xx0xxxx11xx1xxx
+- name: A=1111 B=1101 Cin=0
+  frame: z01z110gzz11z11v
+  expect: 0xx0xxxx11xx1xxx
+- name: A=1111 B=1101 Cin=1
+  frame: z01z111gzz11z11v
+  expect: 0xx1xxxx11xx1xxx
+- name: A=1111 B=1110 Cin=0
+  frame: z11z100gzz11z11v
+  expect: 0xx1xxxx11xx1xxx
+- name: A=1111 B=1110 Cin=1
+  frame: z11z101gzz11z11v
+  expect: 1xx0xxxx11xx1xxx
+- name: A=1111 B=1111 Cin=0
+  frame: z11z110gzz11z11v
+  expect: 1xx0xxxx11xx1xxx
+- name: A=1111 B=1111 Cin=1
+  frame: z11z111gzz11z11v
+  expect: 1xx1xxxx11xx1xxx

@@ -1,0 +1,84 @@
+chip: 74HC161 COUNTER
+package: DIP16
+stop_on_fail: true
+notes:
+- Assumes active-low CLR and active-low LOAD.
+tests:
+- name: reset asserted -> Q=0000
+  frame: 0000000g10zzzzzv
+  expect: xxxxxxxxxx0000xx
+- name: reset released -> Q=0000
+  frame: 1000000g10zzzzzv
+  expect: xxxxxxxxxx0000xx
+- name: load 0000
+  frame: 1c00000g00zzzzzv
+  expect: xxxxxxxxxx0000xx
+- name: load 0101
+  frame: 1c10100g00zzzzzv
+  expect: xxxxxxxxxx0101xx
+- name: load 1010
+  frame: 1c01010g00zzzzzv
+  expect: xxxxxxxxxx1010xx
+- name: load 1111
+  frame: 1c11110g00zzzzzv
+  expect: xxxxxxxxxx1111xx
+- name: count -> 0000
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0000xx
+- name: count -> 0001
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0001xx
+- name: count -> 0010
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0010xx
+- name: count -> 0011
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0011xx
+- name: count -> 0100
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0100xx
+- name: count -> 0101
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0101xx
+- name: count -> 0110
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0110xx
+- name: count -> 0111
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0111xx
+- name: count -> 1000
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx1000xx
+- name: count -> 1001
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx1001xx
+- name: count -> 1010
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx1010xx
+- name: count -> 1011
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx1011xx
+- name: count -> 1100
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx1100xx
+- name: count -> 1101
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx1101xx
+- name: count -> 1110
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx1110xx
+- name: count -> 1111
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx1111xx
+- name: count -> 0000
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0000xx
+- name: count -> 0001
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0001xx
+- name: count -> 0010
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0010xx
+- name: count -> 0011
+  frame: 1c00001g11zzzzzv
+  expect: xxxxxxxxxx0011xx
