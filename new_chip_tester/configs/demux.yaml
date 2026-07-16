@@ -1,0 +1,52 @@
+chip: 74HC139 DEMUX
+package: DIP16
+stop_on_fail: true
+tests:
+- name: unit=1 G=0 A=0 B=0
+  frame: 000zzzzgzzzz001v
+  expect: xxx0111x1111xxxx
+- name: unit=1 G=0 A=0 B=1
+  frame: 001zzzzgzzzz001v
+  expect: xxx1101x1111xxxx
+- name: unit=1 G=0 A=1 B=0
+  frame: 010zzzzgzzzz001v
+  expect: xxx1011x1111xxxx
+- name: unit=1 G=0 A=1 B=1
+  frame: 011zzzzgzzzz001v
+  expect: xxx1110x1111xxxx
+- name: unit=1 G=1 A=0 B=0
+  frame: 100zzzzgzzzz001v
+  expect: xxx1111x1111xxxx
+- name: unit=1 G=1 A=0 B=1
+  frame: 101zzzzgzzzz001v
+  expect: xxx1111x1111xxxx
+- name: unit=1 G=1 A=1 B=0
+  frame: 110zzzzgzzzz001v
+  expect: xxx1111x1111xxxx
+- name: unit=1 G=1 A=1 B=1
+  frame: 111zzzzgzzzz001v
+  expect: xxx1111x1111xxxx
+- name: unit=2 G=0 A=0 B=0
+  frame: 100zzzzgzzzz000v
+  expect: xxx1111x1110xxxx
+- name: unit=2 G=0 A=0 B=1
+  frame: 100zzzzgzzzz100v
+  expect: xxx1111x1011xxxx
+- name: unit=2 G=0 A=1 B=0
+  frame: 100zzzzgzzzz010v
+  expect: xxx1111x1101xxxx
+- name: unit=2 G=0 A=1 B=1
+  frame: 100zzzzgzzzz110v
+  expect: xxx1111x0111xxxx
+- name: unit=2 G=1 A=0 B=0
+  frame: 100zzzzgzzzz001v
+  expect: xxx1111x1111xxxx
+- name: unit=2 G=1 A=0 B=1
+  frame: 100zzzzgzzzz101v
+  expect: xxx1111x1111xxxx
+- name: unit=2 G=1 A=1 B=0
+  frame: 100zzzzgzzzz011v
+  expect: xxx1111x1111xxxx
+- name: unit=2 G=1 A=1 B=1
+  frame: 100zzzzgzzzz111v
+  expect: xxx1111x1111xxxx
